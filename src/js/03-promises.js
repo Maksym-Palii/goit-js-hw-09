@@ -15,7 +15,7 @@ function onClickBtn(evt) {
   const amount = +inputAmountEl.value;
 
   for (let i = 0; i < amount; i += 1) {
-    position = i + 1;
+    let position = i + 1;
     delay = delayFirst + i * step;
 
     createPromise(position, delay)
