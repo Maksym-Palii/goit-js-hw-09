@@ -10,13 +10,13 @@ btnCreatePromEl.addEventListener('click', onClickBtn);
 function onClickBtn(evt) {
   evt.preventDefault();
 
-  let delayFirst = +inputDelayEl.value;
+  const delayFirst = +inputDelayEl.value;
   const step = +inputStepEl.value;
   const amount = +inputAmountEl.value;
 
   for (let i = 0; i < amount; i += 1) {
     let position = i + 1;
-    delay = delayFirst + i * step;
+    let delay = delayFirst + i * step;
 
     createPromise(position, delay)
       .then(({ position, delay }) => {
