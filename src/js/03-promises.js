@@ -14,6 +14,10 @@ function onClickBtn(evt) {
   const step = +inputStepEl.value;
   const amount = +inputAmountEl.value;
 
+  inputDelayEl.value = '';
+  inputStepEl.value = '';
+  inputAmountEl.value = '';
+
   for (let i = 0; i < amount; i += 1) {
     let position = i + 1;
     let delay = delayFirst + i * step;
